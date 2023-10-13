@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block titulo %}Index{% endblock %}
+{% block contenido %}
+<div class="card">
+    <div class="card-header">
+        Lista de libros
+    </div>
+    <div class="card-body">
+        <div class="card-title">Libros</div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Imagen</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Django con Python</td>
+                    <td>imagen.jpg</td>
+                    <td>Libros sobre Django</td>
+                    <td>Editar | Borrar</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer"></div>
+</div>
+{% endblock %}
