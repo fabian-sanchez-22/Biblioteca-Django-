@@ -1,6 +1,14 @@
 <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+
+    {% for campo in formulario %}
     <div class="mb-3">
-        <label class="form-label">Nombre</label>
-        <input class="form-control" type="text" name="" id="" placeholder="nombre">
+        <label class="form-label">{{ campo.label }}</label>
+        <input class="form-control" type="{{ campo.field.widget.input_type }}" name="{{ campo.name }}" id="{{ campo.id }}" placeholder="{{ campo.label }}">
     </div>
+    <div class="col-12 help-text">{{ campo.errors }}</div>
+    {% endfor %}
+
+    <input name="" id="" class="btn btn-primary" type="submit" value="Registrar">
 </form>

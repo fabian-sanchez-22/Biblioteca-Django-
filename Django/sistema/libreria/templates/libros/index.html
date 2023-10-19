@@ -24,7 +24,10 @@
                     <td>{{ libro.titulo }}</td>
                     <td><img src="{{ libro.imagen.url }} " style="height: 50px; width: 60px;"></td>
                     <td>{{ libro.descripcion }}</td>
-                    <td><a class=" btn btn-warning me-3" href="{% url 'editar' %}">Editar</a><a class="btn btn-danger" href="#">Eliminar</a></td>
+                    <td>
+                        <a class=" btn btn-warning me-3" href="{% url 'editar' %}">Editar</a>
+                        <a class="btn btn-danger" href="{% url 'eliminar' libro.id %}">Eliminar</a>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
